@@ -1,0 +1,86 @@
+@import '../../styles/_variables'
+
+.containerCarousel
+    display: flex
+    flex-direction: column
+    width: 100%
+
+    .currentPost
+        cursor: pointer
+        width: 100%
+        height: 60%
+        overflow: hidden
+        position: relative
+        box-shadow: 10px 10px 20px 20px rgba(0, 0, 0, 0.05)
+        border-radius: 5px
+        padding: 8px
+
+        .imgDiv
+            transition: all 0.3s
+            display: flex
+            position: relative
+            flex-direction: row
+            align-content: center
+            align-items: center
+            gap: 32px
+
+            .textPost
+                display: flex
+                flex-direction: column
+                align-self: center
+                justify-self: center
+                gap:8px
+
+    .carouselControls
+        display: flex
+        justify-content: center
+        margin-top: 2rem
+        gap: 8px
+
+
+        .prevControl
+            color: $grey-light
+            cursor: pointer
+            padding: 16px
+            background-color: $red-light
+            border: none
+            border-radius: 5px
+            width: 80px
+
+        .prevControlDisabled
+            background-color: $red-light
+            color: $grey-light
+            opacity: 0.7
+            cursor: hand
+            padding: 16px
+            border: none
+            border-radius: 5px
+            width: 80px
+
+
+
+        
+        .nextControl
+            color: $grey-light
+            cursor: pointer
+            padding: 16px
+            background-color: $red-light
+            border: none
+            border-radius: 5px
+            width: 80px
+
+        .nextControlDisabled
+            background-color: $red-light
+            color: $grey-light
+            opacity: 0.7
+            cursor: hand
+            padding: 16px
+            border: none
+            border-radius: 5px
+            width: 80px
+        
+
+
+
+
+    

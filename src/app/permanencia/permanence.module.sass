@@ -1,0 +1,38 @@
+@import '../../styles/_utils'
+@import '../../styles/_variables'
+    
+.containerPermanence
+    @extend %paddings
+    display: flex
+    flex-direction: column
+    gap: 2rem
+    justify-content: center
+    align-content: center
+
+    .titleSection
+        font-weight: 500
+        font-size: 24px
+
+    .headerPermanence
+        display: flex
+        flex-direction: row
+        gap: 2rem
+        justify-content: space-between
+
+        .pageTitle
+            font-size: 2rem
+            font-weight: bold
+
+        .navBar
+            ul
+                list-style: none
+                display: flex
+                flex-direction: row
+                gap: 3rem
+
+                .navItem
+                    cursor: pointer
+                    font-weight: 600
+                    &:hover
+                        color: $red-bold
+                
