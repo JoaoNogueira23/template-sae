@@ -1,0 +1,26 @@
+@import '../../styles/_variables'
+    
+.header
+    width: calc(100vw - 64px)
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    padding: 32px
+    background-color: $bg-secd
+
+    
+    position: fixed
+
+    .navbar
+        color: $grey-light
+
+        .listNav
+            list-style: none
+            display: flex
+            flex-direction: row
+            gap: 32px
+
+            li
+                cursor: pointer
+                &:hover
+                    color: $red-light
