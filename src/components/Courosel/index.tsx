@@ -4,6 +4,7 @@ import { objectPostType } from "@/types/postType";
 import Image from "next/image";
 import { useRef, useState } from "react"
 import styles from './carousel.module.sass'
+import { useRouter } from "next/navigation";
 
 const posts: objectPostType[] = [
     {
@@ -69,9 +70,15 @@ interface CarouselProps {
 
 
 export default function Carousel(props : CarouselProps){
-    const [currentImg, setCurrentImg] = useState(0)
+    const [currentImg, setCurrentImg] = useState<number>(0)
     const [carouselSize, setCarouselSize] = useState({ width: 0, height: 0 })
     const carouselRef = useRef(null)
+    const router = useRouter()
+
+    const handleClick = () => {
+        console.log(currentImg)
+        router.push(`/permanencia/blog/${currentImg}`)
+    }
 
     return(
         <div className={styles.containerCarousel}>
@@ -81,6 +88,7 @@ export default function Carousel(props : CarouselProps){
                     style={{
                         left: -currentImg * carouselSize.width
                     }}
+                    onClick={handleClick}
                     /* 'w-full h-full absolute flex transition-all duration-300' */
                     className={styles.currentPostImg}>
                     <div className={styles.imgDiv}>

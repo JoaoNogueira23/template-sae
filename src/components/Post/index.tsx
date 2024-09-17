@@ -3,18 +3,18 @@ import styles from './post.module.sass'
 import FrameHorizontal from "../Frames"
 import { objectPostType } from "@/types/postType"
 interface PostComponentProps {
-    objectPostType: objectPostType
+    objectPost: objectPostType
 }
-export default function PostComponent({objectPostType} : PostComponentProps){
+export default function PostComponent({objectPost} : PostComponentProps){
     return(
         <div className={styles.containerPost}>
             <div className={styles.postDescribeSection}>
                 <h4 className={styles.postDate}>
-                    {objectPostType.postDate}
+                    {objectPost.postDate}
                 </h4>
 
                 <h2 className={styles.postTitle}>
-                    {objectPostType.postTitle}
+                    {objectPost.postTitle}
                 </h2>
 
             </div>
@@ -30,15 +30,15 @@ export default function PostComponent({objectPostType} : PostComponentProps){
             <div className={styles.contentParagraphs}>
                 <div className={styles.postDescribeSection}>
                     <h4 className={styles.subTitle}>
-                        {objectPostType.subTitle}
+                        {objectPost.subTitle}
                     </h4>
                 </div>
                 
 
                 <p className={styles.firstParagraph}>
-                    {objectPostType.paragraphs[0]}
+                    {objectPost.paragraphs[0]}
                 </p>
-                {objectPostType.paragraphs.map((paragraph, index) => (
+                {objectPost.paragraphs.map((paragraph, index) => (
                     index != 0 ? (
                         <p key={`p-${index}`}>
                             {paragraph}
