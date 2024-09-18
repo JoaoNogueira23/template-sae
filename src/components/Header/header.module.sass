@@ -1,13 +1,12 @@
 @import '../../styles/_variables'
     
 .header
-    width: calc(100vw - 64px)
+    width: calc(100vw - 300px)
     display: flex
     flex-direction: row
     justify-content: space-between
-    padding: 32px
+    padding: 32px 150px
     background-color: $bg-secd
-
     
     position: fixed
 
@@ -16,11 +15,15 @@
 
         .listNav
             list-style: none
+            text-decoration: none
             display: flex
             flex-direction: row
             gap: 32px
 
-            li
+            .pageLink
+                font-weight: 600
+                color: #252525
+                text-decoration: none
                 cursor: pointer
                 &:hover
                     color: $red-light

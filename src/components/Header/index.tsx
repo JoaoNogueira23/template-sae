@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styles from './header.module.sass'
 
 export default function Header() {
@@ -9,9 +10,12 @@ export default function Header() {
 
             <nav className={styles.navbar}>
                 <ul className={styles.listNav}>
-                    <li>Opção 1</li>
-                    <li>Opção 2</li>
-                    <li>Opção 3</li>
+                    <li>
+                        <Link href={'/'} className={styles.pageLink}>Home</Link>
+                    </li>
+                    <li>
+                        <Link href={'/permanencia'} className={styles.pageLink}>Permanencia</Link>
+                    </li>
                 </ul>
             </nav>
         </header>

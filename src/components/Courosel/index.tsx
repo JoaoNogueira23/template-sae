@@ -2,7 +2,7 @@
 
 import { objectPostType } from "@/types/postType";
 import Image from "next/image";
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import styles from './carousel.module.sass'
 import { useRouter } from "next/navigation";
 
@@ -76,42 +76,43 @@ export default function Carousel(props : CarouselProps){
     const router = useRouter()
 
     const handleClick = () => {
-        console.log(currentImg)
         router.push(`/permanencia/blog/${currentImg}`)
     }
 
     return(
         <div className={styles.containerCarousel}>
-            {/*'w-80 h-60 rounded-md overflow-hidden relative'  */}
-            <div className={styles.currentPost}>
-                <div ref={carouselRef}
-                    style={{
-                        left: -currentImg * carouselSize.width
-                    }}
-                    onClick={handleClick}
-                    /* 'w-full h-full absolute flex transition-all duration-300' */
-                    className={styles.currentPostImg}>
-                    <div className={styles.imgDiv}>
-                        <Image
-                            className={styles.imgButton}
-                            alt="random image"
-                            width={700}
-                            height={420}
-                            src={posts[currentImg].imgPath}
-                        />
+            <div className={styles.slides}>
+                {posts.map((post, index) => (
+                    <div
+                        onClick={handleClick}
+                        className={`${styles.slide} ${
+                            index === currentImg ? styles.active : ''
+                            }`}
+                        key={`post-${Math.random()}`}
+                    >
+                        <div className={styles.imgDiv}>
+                            <Image
+                                className={styles.imgButton}
+                                alt="random image"
+                                width={700}
+                                height={420}
+                                src={post.imgPath}
+                            />
 
-                        <div className={styles.textPost}>
-                            <h3>{posts[currentImg].postTitle}</h3>
-                            <p>
-                                {posts[currentImg].subTitle}
-                            </p>
-                            <p>
-                                {posts[currentImg].paragraphs[0]}
-                            </p>
+                            <div className={styles.textPost}>
+                                <h3>{post.postTitle}</h3>
+                                <p>
+                                    {post.subTitle}
+                                </p>
+                                <p>
+                                    {post.paragraphs[0]}
+                                </p>
 
+                            </div>
                         </div>
                     </div>
-                </div>
+                ))}
+                
             </div>
             {/* flex justify-center mt-3 */}
             <div className={styles.carouselControls}>

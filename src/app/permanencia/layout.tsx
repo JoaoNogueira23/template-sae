@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './permanence.module.sass'
+import Link from 'next/link'
 
 
 interface PermanenceLayoutProps {
@@ -14,12 +15,16 @@ export default function PermanenceLayout({children}: PermanenceLayoutProps){
 
                 <nav className={styles.navBar}>
                     <ul>
-                        <li className={styles.navItem}>Serviço Social</li>
-                        <li className={styles.navItem}>Bolsas Auxílio</li>
-                        <li className={styles.navItem}>Orientações de Projetos</li>
-                        <li className={styles.navItem}>Notícias</li>
-                        <li className={styles.navItem}>Agenda</li>
-                        <li className={styles.navItem}>Conta</li>  
+                        <li >
+                            <Link href='/permanencia/servico-social' className={styles.navItem}>
+                                Serviço Social
+                            </Link> 
+                        </li>
+                        <li >
+                            <Link href='/permanencia/noticias' className={styles.navItem}>
+                                Notícias
+                            </Link>
+                        </li>
                     </ul>
                 </nav>
             </div>

@@ -3,33 +3,57 @@
 .containerCarousel
     display: flex
     flex-direction: column
+    gap:64px
     width: 100%
+    overflow: hidden
+    position: relative
+    justify-content: center
+    align-items: center
 
-    .currentPost
+
+    .slides
+        display: flex
         cursor: pointer
         width: 100%
         height: 60%
         overflow: hidden
-        position: relative
-        box-shadow: 10px 10px 20px 20px rgba(0, 0, 0, 0.05)
-        border-radius: 5px
         padding: 8px
+        transition: transform 0.5s ease-in-out
 
-        .imgDiv
-            transition: all 0.3s
+        .slide 
+            border-radius: 5px
+            box-shadow: 10px 10px 20px 20px rgba(0, 0, 0, 0.05)
             display: flex
-            position: relative
+            transition: opacity 0.5s ease-in-out
+            height: 100%
             flex-direction: row
-            align-content: center
             align-items: center
-            gap: 32px
+            opacity: 0
+            position: absolute
+            top: 0
+            left: 0
+            
 
-            .textPost
+            &.active 
+                opacity: 1 
+                position: relative
+                
+        
+            .imgDiv
+                transition: all 0.3s
                 display: flex
-                flex-direction: column
-                align-self: center
-                justify-self: center
-                gap:8px
+                position: relative
+                flex-direction: row
+                align-content: center
+                align-items: center
+                gap: 32px
+
+                .textPost
+                    display: flex
+                    flex-direction: column
+                    align-self: center
+                    justify-self: center
+                    gap:8px
 
     .carouselControls
         display: flex
