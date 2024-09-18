@@ -9,13 +9,14 @@ import { useRouter } from "next/navigation";
 const posts: objectPostType[] = [
     {
         postDate: '2024-09-01',
-        postTitle: 'Introduction to TypeScript',
-        subTitle: 'Getting started with TypeScript for better JavaScript development',
+        postTitle: 'Unicamp promove ação inclusiva na Aldeia Tapirema',
+        subTitle: 'Assistentes sociais e estudantes indígenas fortalecem laços e compartilham experiências nos II Jogos Indígenas da Aldeia Tapirema',
         imgPath: '/post1.png',
         paragraphs: [
-            'TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.',
-            'It provides optional static typing, classes, and interfaces.',
-            'In this post, we will explore how to get started with TypeScript.'
+            'A Unicamp esteve representada por uma comitiva de estudantes de graduação, assistentes sociais da Diretoria Executiva de Apoio e Permanência Estudantil, Cibele Papa Palmeira, Érica Maria Cazetta, Vani Santos e Fernanda Ayres da Silva representante da Diretoria Executiva de Direitos Humanos participaram da ação para divulgar o Vestibular Indígena e as Políticas de Permanência Estudantil.',
+            'As assistentes sociais e os estudantes da Unicamp conduziram rodas de conversa, compartilhando suas experiências sobre a importância da educação superior para as comunidades indígenas. Os estudantes indígenas da Unicamp também contribuíram significativamente, relatando suas vivências pessoais e acadêmicas, inspirando outros jovens a considerarem o ingresso na universidade.',
+            'Apesar da proximidade geográfica, a participação de indígenas no Vestibular da Unicamp ainda é modesta, tornando essa ação essencial para fortalecer o vínculo entre a universidade e as comunidades. Desde a criação do Vestibular Indígena em 2019, o número de estudantes indígenas vem crescendo, e conhecer de perto a realidade dessas populações, como na Aldeia Tapirema, permite o desenvolvimento de políticas mais eficazes para garantir a inclusão e permanência desses alunos.',
+            'Aldeia Tapirema está localizada na Terra Indígena de Piaçaguera, a Aldeia Tapirema é um polo cultural que promove cursos e eventos, como os Jogos Indígenas, em colaboração com diversas instituições.'
         ]
     },
     {
